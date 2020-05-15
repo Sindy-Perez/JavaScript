@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <ol id="Lista">
+        <li>Esta Web es de sólo lectura</li>
+        <li>El usuario no puede interactuar con el contenido de la página</li>
+    </ol>
+    <script>
+        var elemento = document.createElement("li"),
+            contenido = document.createTextNode("Nuevo Texto");
+            elemento.appendChild(contenido);
+
+            var padre= document.getElementsByTagName("li")[0].parentNode;
+            primerElemento = document.getElementsByTagName("li")[0];
+            padre.insertBefore(elemento, primerElemento);
+    </script>   
+</body>
+</html>

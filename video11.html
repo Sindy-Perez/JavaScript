@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope JavaScript</title>
+</head>
+<body>
+    <script>
+        //Global Podemos accder a ellas desde cualquier parte del codigo
+        //Local Variables creadas desde una funcion, solo pueden ser accedidas desde su funcion o una funcion anidada.
+
+        (function(){
+            var variableGlobal="Esta es Global";                            
+
+                var mifuncion=function(){
+                    var variableLocal="Esta es Local";
+                    alert(variableLocal);
+
+                    var FuncionLocal= function(){
+                        var variableLocal="Esta es variable local, dentro de funcionlocal";
+                        alert(variableLocal);  
+                    }
+                    FuncionLocal();
+                }
+                mifuncion();
+                //alert(variableGlobal);
+        }())
+    </script>    
+</body>
+</html>
